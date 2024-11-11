@@ -1,0 +1,25 @@
+var a=12; //global scoper
+function fun(){
+    let a=13;  // functional scope
+    let b=12; // accessible only in function block
+    const c=12;
+    if(true){
+        console.log(a); // accessible value:13
+        let d=12; // accessible only in the block 
+        const c=1;
+        console.log(c) //1 // shadow 
+    }
+}
+fun();
+//console.log(d);// error 
+//console.log(b) // error
+console.log(a); // 12 
+
+
+const id=21491 // number , const values are not reassigned 
+//const id='21491' //error
+let name='sai';
+let age=23; //number
+let major=true; // boolean
+let properties={height:5.2,weight:60} //object
+let marks=[54,63,76,88] // array
