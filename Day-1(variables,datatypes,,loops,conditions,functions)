@@ -23,3 +23,129 @@ let age=23; //number
 let major=true; // boolean
 let properties={height:5.2,weight:60} //object
 let marks=[54,63,76,88] // array
+
+
+let age=21;
+if(age>18){
+    console.log("eligible to vote");
+}
+else{
+    console.log("not eligible to vote");
+}
+
+let marks=56;
+if(marks>90){
+    console.log("A+");
+}
+else if(marks>80&&marks<90){
+    console.log("B+");
+}
+else if(marks>70 && marks<80){
+    console.log("C+");
+}
+else if(marks>60&& marks<70){
+    console.log("D+");
+}
+else if(marks>50 && marks<60){
+    console.log("E+");
+}
+else if(marks<50){
+    console.log("fail")
+}
+
+let day="wed";    //swith with break keyword
+switch(day){
+    case 'monday':
+        console.log("meditation");
+        break;
+    case 'tue':
+        console.log("yoga");
+        break;
+    case 'wed':
+        console.log("writing");
+        break;
+    case 'thu':
+        console.log("reading");
+        break;
+    case 'fri':
+        console.log("listening ");
+        break;
+    case 'sat':
+        console.log("swimming");
+        break;
+    default:
+    console.log("not a day");
+    
+}
+
+
+//nested if
+let age=21;
+let voterId=false;
+if(age>18){
+    if(voterId){
+        console.log("right to vote");
+    }
+    else{
+        console.log("apply for the vote");
+    }
+    
+}
+else{
+    console.log("age must be above 18 to vote");
+}
+
+let age=5;
+let message=age >18 ? "eligible" : "not eligible";
+console.log(message)
+
+
+for(let  i=1;i<=10;i++){
+    console.log('hi')
+}
+
+let count=12;
+while(count>10){
+    console.log("hi");
+    count--;
+}
+
+let count=12;
+do{
+    //console.log('hello')
+}
+while(count<10){
+    console.log("hi");
+    count--;
+}
+
+function onlineStore(quantity){
+  let   productName='burger';
+  let price=50;
+  return  quantity * price;
+}
+console.log(onlineStore(5));
+console.log(onlineStore(2));
+
+function greetings(name,place){
+    return `hello ${name} welcome to ${place} `
+}
+console.log(greetings('sai','ongole'));
+console.log( greetings('naga','hyd'));
+
+let add=function(a,b){
+    return a+b
+}
+console.log(add(2,3))
+console.log(add(5,6))
+
+//arrow functioms
+let add=(a,b)=> a+b
+console.log(add(2,3))
+
+let greetings =()=> 'hi'
+console.log(greetings())
+
+let sayHi=name=>`hello ${name}`
+console.log(sayHi('sai'))
+console.log(sayHi('naga'))
