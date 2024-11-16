@@ -20,3 +20,35 @@ fs.readFile(filePath,'utf8',(err,data)=>{
     }
     console.log("data inside the file:",data);
 });
+
+//read file if not exist write file
+
+const fs=require('fs');
+const path='sampl.txt';
+fs.readFile(path,'utf8',(err,data)=>{
+    if(err){
+        fs.writeFile(path,'this is content written',(writeErr)=>{
+            if(writeErr){
+                console.log(writeErr);
+            }
+            console.log('file created ');
+        });
+    }
+    else{
+        console.log("the content of the file:",data);
+    }
+    
+});
+
+//creating own module 
+
+function greet(name){
+    console.log(`hello ${name}`);
+}
+
+module.exports=greet;
+
+//input from the console
+const greet=require('./app');
+greet('sai');
+
